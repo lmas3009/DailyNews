@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Sniglet&display=swap");
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column1 {
+  float: left;
+  width: 20%;
+  height: 90vh;
+  background-color: #3f51b5;
+  border-bottom-right-radius: 10px;
+}
+
+.column2 {
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 90vh;
+}
+
+.subcat {
+  padding: 20px;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: black;
+  background-color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  font-family: 'Sniglet', cursive;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+.subcat1 {
+  padding: 20px;
+  cursor: not-allowed;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: black;
+  background-color: #cec9c9;
+  font-size: 20px;
+  border-radius: 10px;
+  font-family: 'Sniglet', cursive;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  background-color: #c6c8ca;
+}
+
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+}
+
+.categoryname {
+  width: 100%;
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
+  font-size: 20px;
+  font-family: 'Sniglet', cursive;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  font-style: initial;
+  text-transform: capitalize;
+}
+
+.MuiCardActions-root {
+  background-color: red;
+  width: 35%;
+  border-top-right-radius: 10px;
+}
+
+.MuiCardActions-root span {
+  color: white;
+}
+
+.New {
+  height: 100%;
+  background-color: white;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: gray;
+  margin-top: 15%;
+  font-size: 10px;
+}
+
+.category {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.cat {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+  -webkit-box-shadow: 5px 5px gray;
+          box-shadow: 5px 5px gray;
+  border: 0.5px solid black;
+}
+
+@media screen and (max-width: 750px) {
+  .column1 {
+    display: none;
+  }
+  .grid-container {
+    display: block;
+  }
+  .category {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .home {
+    display: none;
+  }
+  .category {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .subcat1 {
+    width: 130px;
+  }
+  .subcat {
+    width: 130px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .subcat1 {
+    width: 100px;
+  }
+  ul {
+    margin-left: -40px;
+  }
+  .subcat {
+    width: 120px;
+  }
+}
+/*# sourceMappingURL=Home.css.map */
