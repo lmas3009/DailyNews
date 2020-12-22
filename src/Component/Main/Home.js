@@ -47,7 +47,7 @@ export default function Home(){
                 setloading(false)
                 let data = await axios({
                     method:'get',
-                    url:'http://newsapi.org/v2/top-headlines?country='+countryname[0]+countryname[1]+'&category='+catename+'&apiKey=e2b1a670aa6c406a821291c1350e7b90'
+                    url:'https://newsapi.org/v2/top-headlines?country='+countryname[0]+countryname[1]+'&category='+catename+'&apiKey=e2b1a670aa6c406a821291c1350e7b90'
                     //url:'https://jsonplaceholder.typicode.com/users'
                 }).then(({data})=>{
                     setData(data.articles)
