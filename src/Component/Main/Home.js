@@ -29,13 +29,16 @@ export default function Home(){
     const search = useLocation().search;
     
     const country = new URLSearchParams(search).get('country')
+    const categoryname = new URLSearchParams(search).get('category')
     var countryname=''
-    if (country===null) {
+    var catename=''
+    if (country===null && categoryname===null) {
         countryname='us';
+        catename='business';
     } else {
         countryname = country;
+        catename = categoryname
     }
-    const categoryname = new URLSearchParams(search).get('category')
     useEffect(()=>{
         
        async function GetData(){
@@ -44,7 +47,7 @@ export default function Home(){
                 setloading(false)
                 let data = await axios({
                     method:'get',
-                    url:'http://newsapi.org/v2/top-headlines?country='+countryname[0]+countryname[1]+'&category='+categoryname+'&apiKey=e2b1a670aa6c406a821291c1350e7b90'
+                    url:'http://newsapi.org/v2/top-headlines?country='+countryname[0]+countryname[1]+'&category='+catename+'&apiKey=e2b1a670aa6c406a821291c1350e7b90'
                     //url:'https://jsonplaceholder.typicode.com/users'
                 }).then(({data})=>{
                     setData(data.articles)
